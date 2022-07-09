@@ -11,4 +11,4 @@ COPY --from=bun /root/.bun/bin/bun /bin/bun
 
 WORKDIR /app
 COPY ./server.ts ./
-ENTRYPOINT ["bun", "server.ts"]
+CMD ["bun", "server.ts"]
