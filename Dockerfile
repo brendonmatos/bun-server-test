@@ -1,4 +1,4 @@
-FROM scratch as base
+FROM de
 
 FROM jarredsumner/bun:edge as bun
 
@@ -9,9 +9,6 @@ FROM base
 
 COPY --from=bun /root/.bun/bin/bun /bin/bun
 
-WORKDIR /app
 COPY ./server.ts ./
 
-RUN ls /bin
-
-CMD ["bun", "server.ts"]
+CMD ["/bin/bun", "./server.ts"]
