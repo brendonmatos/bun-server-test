@@ -11,4 +11,7 @@ COPY --from=bun /root/.bun/bin/bun /bin/bun
 
 WORKDIR /app
 COPY ./server.ts ./
+
+RUN ls /bin
+
 CMD ["bun", "server.ts"]
